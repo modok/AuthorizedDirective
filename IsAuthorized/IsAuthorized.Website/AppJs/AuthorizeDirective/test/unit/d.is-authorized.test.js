@@ -23,7 +23,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<button is-authorized for-role="roles" your-roles="yourRoles"></button>')(scope);
+			target = compile('<button is-authorized for-roles="roles" your-roles="yourRoles"></button>')(scope);
 			scope.$digest();
 
 			expect($(target).attr('disabled')).toBeTruthy();
@@ -34,7 +34,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<button is-authorized for-role="roles" your-roles="yourRoles"></button>')(scope);
+			target = compile('<button is-authorized for-roles="roles" your-roles="yourRoles"></button>')(scope);
 			scope.$digest();
 
 			expect($(target).attr('disabled')).toBeFalsy();
@@ -49,7 +49,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<input is-authorized for-role="roles" your-roles="yourRoles" />')(scope);
+			target = compile('<input is-authorized for-roles="roles" your-roles="yourRoles" />')(scope);
 			scope.$digest();
 
 			expect($(target).attr('readonly')).toBeTruthy();
@@ -60,7 +60,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<input is-authorized for-role="roles" your-roles="yourRoles" />')(scope);
+			target = compile('<input is-authorized for-roles="roles" your-roles="yourRoles" />')(scope);
 			scope.$digest();
 
 			expect($(target).attr('readonly')).toBeFalsy();
@@ -75,7 +75,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<textarea is-authorized for-role="roles" your-roles="yourRoles"></textarea>')(scope);
+			target = compile('<textarea is-authorized for-roles="roles" your-roles="yourRoles"></textarea>')(scope);
 			scope.$digest();
 
 			expect($(target).attr('readonly')).toBeTruthy();
@@ -86,7 +86,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<textarea is-authorized for-role="roles" your-roles="yourRoles"></textarea>')(scope);
+			target = compile('<textarea is-authorized for-roles="roles" your-roles="yourRoles"></textarea>')(scope);
 			scope.$digest();
 
 			expect($(target).attr('readonly')).toBeFalsy();
@@ -101,7 +101,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<form is-authorized for-role="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
+			target = compile('<form is-authorized for-roles="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
 			scope.$digest();
 
 			expect($(target).find('.textArea').attr('readonly')).toBeTruthy();
@@ -114,7 +114,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<form is-authorized for-role="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
+			target = compile('<form is-authorized for-roles="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
 			scope.$digest();
 
 			expect($(target).find('.textArea').attr('readonly')).toBeFalsy();
@@ -131,7 +131,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<div id="parent"><div class="child" is-authorized for-role="roles" your-roles="yourRoles"></div></div>')(scope);
+			target = compile('<div id="parent"><div class="child" is-authorized for-roles="roles" your-roles="yourRoles"></div></div>')(scope);
 			scope.$digest();
 			expect(target.find('.child').length).toBe(0);
 		});
@@ -141,7 +141,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<div id="parent"><div class="child" is-authorized for-role="roles" your-roles="yourRoles"></div></div>')(scope);
+			target = compile('<div id="parent"><div class="child" is-authorized for-roles="roles" your-roles="yourRoles"></div></div>')(scope);
 			scope.$digest();
 
 			expect(target.find('.child').length).toBe(1);
@@ -156,7 +156,7 @@ describe('IsAuthorized: ', function () {
 			scope.roles = ['user', 'admin'];
 			scope.yourRoles = ['admin'];
 
-			target = compile('<div id="parent"><div class="child" is-authorized for-role="roles" your-roles="yourRoles"></div></div>')(scope);
+			target = compile('<div id="parent"><div class="child" is-authorized for-roles="roles" your-roles="yourRoles"></div></div>')(scope);
 			scope.$digest();
 			expect(target.find('.child').length).toBe(1);
 		});

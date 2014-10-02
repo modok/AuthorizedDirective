@@ -10,20 +10,20 @@
 			<h3>Defined roles: {{forRoles}}</h3>
 			<div class="well well-sm">
 				<form class="form-inline" id="form1">
-					<input id="input1" is-authorized for-role="forRoles.admin" your-roles="yourRoles" type="text" class="form-control" value="for admin role" />
+					<input id="input1" is-authorized for-roles="forRoles.admin" your-roles="yourRoles" type="text" class="form-control" value="for admin role" />
 					<button id="button1" type="submit" class="btn btn-primary">No auth needed</button>
 				</form>
 				<div>
-					<a id="link1_1" href="#" is-authorized for-role="forRoles.admin" your-roles="yourRoles">admin link</a> | <a id="link1_2" href="#" is-authorized for-role="forRoles.both" your-roles="yourRoles">user and admin link</a>
+					<a id="link1_1" href="#" is-authorized for-roles="forRoles.admin" your-roles="yourRoles">admin link</a> | <a id="link1_2" href="#" is-authorized for-roles="forRoles.both" your-roles="yourRoles">user and admin link</a>
 				</div>
 			</div>
 
 			<div class="well well-sm">
-				<form id="form2" is-authorized for-role="forRoles.user" your-roles="yourRoles" class="form-inline">
+				<form id="form2" is-authorized for-roles="forRoles.user" your-roles="yourRoles" class="form-inline">
 					<input id="input2" type="text" value="for user role" class="form-control" />
 					<button id="button2" type="submit" class="btn btn-primary">for user role</button>
 					<div>
-						<a id="link2_1" href="#" is-authorized for-role="forRoles.user" your-roles="yourRoles">user link</a> | <a id="link2_2" href="#" is-authorized for-role="forRoles.both" your-roles="yourRoles">user and admin	 link</a>
+						<a id="link2_1" href="#" is-authorized for-roles="forRoles.user" your-roles="yourRoles">user link</a> | <a id="link2_2" href="#" is-authorized for-roles="forRoles.both" your-roles="yourRoles">user and admin	 link</a>
 					</div>
 				</form>
 			</div>

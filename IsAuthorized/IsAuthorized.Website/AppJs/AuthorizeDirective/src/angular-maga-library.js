@@ -3,37 +3,37 @@
 	return {
 		restrict: 'A',
 		scope: {
-			forRole: '=',
-			yourRoles: '='
+			forRoles: '=',
+			yourRoles: '=' 
 		},
 		link: function ($scope, iElement) {
 			switch (iElement[0].tagName.toLowerCase()) {
 				case 'button':
-					if (!roleService.isInRole($scope.forRole, $scope.yourRoles)) {
+					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
 						isDisabled(iElement);
 					}
 					break;
 
 				case 'input':
-					if (!roleService.isInRole($scope.forRole, $scope.yourRoles)) {
+					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
 						isReadonly(iElement);
 					}
 					break;
 
 				case 'textarea':
-					if (!roleService.isInRole($scope.forRole, $scope.yourRoles)) {
+					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
 						isReadonly(iElement);
 					}
 					break;
 
 				case 'form':
-					if (!roleService.isInRole($scope.forRole, $scope.yourRoles)) {
+					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
 						isFormDisabled(iElement);
 					}
 					break;
 
 				default:
-					if (!roleService.isInRole($scope.forRole, $scope.yourRoles)) {
+					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
 						isRemoved(iElement);
 					}
 					break;

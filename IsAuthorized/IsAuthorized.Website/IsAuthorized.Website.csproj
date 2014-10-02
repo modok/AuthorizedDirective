@@ -123,8 +123,6 @@
     <Content Include="AppJs\AuthorizeDirective\src\angular-maga-library.min.js">
       <DependentUpon>angular-maga-library.js</DependentUpon>
     </Content>
-    <Content Include="AppJs\AuthorizeDirective\test\E2E\config.js" />
-    <Content Include="AppJs\AuthorizeDirective\test\E2E\sample.index.js" />
     <Content Include="AppJs\AuthorizeDirective\test\unit\d.is-authorized.test.js" />
     <Content Include="AppJs\Sample\run.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -168,7 +166,6 @@
     <Content Include="AppJs\AuthorizeDirective\src\angular-maga-library.min.js.map">
       <DependentUpon>angular-maga-library.min.js</DependentUpon>
     </Content>
-    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -904,6 +901,7 @@
     <Content Include="Scripts\jasmine\console.js" />
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
@@ -932,6 +930,7 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppJs\AuthorizeDirective\test\E2E\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
