@@ -8,12 +8,12 @@ Usage
 
 Output  
 
-    <input type="text" readonly />
+    <input type="text" disabled />
     
 It works for any tag following these rules:
 
-* **input** will be readonly
+* **input** will be disabled
 * **button** will be disabled
 * any other **tag** and its content will be removed
 
-To manage complex **form** if you put the directive on the form all the form controls will be disabled or set as a readonly following the rule above.
+To manage complex **form** if you put the directive on the form all the form controls will be disabled following the rule above.
