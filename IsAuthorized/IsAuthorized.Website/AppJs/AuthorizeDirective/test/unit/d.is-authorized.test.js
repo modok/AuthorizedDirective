@@ -52,7 +52,7 @@ describe('IsAuthorized: ', function () {
 			target = compile('<input is-authorized for-roles="roles" your-roles="yourRoles" />')(scope);
 			scope.$digest();
 
-			expect($(target).attr('readonly')).toBeTruthy();
+			expect($(target).attr('disabled')).toBeTruthy();
 		});
 
 		it('it shouldnt be readonly if the user is authorized', function () {
@@ -63,7 +63,7 @@ describe('IsAuthorized: ', function () {
 			target = compile('<input is-authorized for-roles="roles" your-roles="yourRoles" />')(scope);
 			scope.$digest();
 
-			expect($(target).attr('readonly')).toBeFalsy();
+			expect($(target).attr('disabled')).toBeFalsy();
 		});
 
 	});
@@ -78,7 +78,7 @@ describe('IsAuthorized: ', function () {
 			target = compile('<textarea is-authorized for-roles="roles" your-roles="yourRoles"></textarea>')(scope);
 			scope.$digest();
 
-			expect($(target).attr('readonly')).toBeTruthy();
+			expect($(target).attr('disabled')).toBeTruthy();
 		});
 
 		it('it shouldnt be readonly if the user is authorized', function () {
@@ -89,7 +89,7 @@ describe('IsAuthorized: ', function () {
 			target = compile('<textarea is-authorized for-roles="roles" your-roles="yourRoles"></textarea>')(scope);
 			scope.$digest();
 
-			expect($(target).attr('readonly')).toBeFalsy();
+			expect($(target).attr('disabled')).toBeFalsy();
 		});
 
 	});
@@ -104,8 +104,8 @@ describe('IsAuthorized: ', function () {
 			target = compile('<form is-authorized for-roles="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
 			scope.$digest();
 
-			expect($(target).find('.textArea').attr('readonly')).toBeTruthy();
-			expect($(target).find('.input').attr('readonly')).toBeTruthy();
+			expect($(target).find('.textArea').attr('disabled')).toBeTruthy();
+			expect($(target).find('.input').attr('disabled')).toBeTruthy();
 			expect($(target).find('.button').attr('disabled')).toBeTruthy();
 		});
 
@@ -117,8 +117,8 @@ describe('IsAuthorized: ', function () {
 			target = compile('<form is-authorized for-roles="roles" your-roles="yourRoles"><textarea class="textArea"></textarea><input type="text" class="input" /><button class="button"></button></form>')(scope);
 			scope.$digest();
 
-			expect($(target).find('.textArea').attr('readonly')).toBeFalsy();
-			expect($(target).find('.input').attr('readonly')).toBeFalsy();
+			expect($(target).find('.textArea').attr('disabled')).toBeFalsy();
+			expect($(target).find('.input').attr('disabled')).toBeFalsy();
 			expect($(target).find('.button').attr('disabled')).toBeFalsy();
 		});
 

@@ -16,13 +16,13 @@
 
 				case 'input':
 					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
-						isReadonly(iElement);
+						isDisabled(iElement);
 					}
 					break;
 
 				case 'textarea':
 					if (!roleService.isInRole($scope.forRoles, $scope.yourRoles)) {
-						isReadonly(iElement);
+						isDisabled(iElement);
 					}
 					break;
 
@@ -40,9 +40,9 @@
 			}
 
 			function isFormDisabled(el) {
-				el.find('input').attr('readonly', 'readonly');
+				el.find('input').attr('disabled', 'disabled');
 				el.find('button').attr('disabled', 'disabled');
-				el.find('textarea').attr('readonly', 'readonly');
+				el.find('textarea').attr('disabled', 'disabled');
 			}
 
 			function isDisabled(el) {
