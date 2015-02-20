@@ -1,6 +1,8 @@
 AuthorizedDirective
 ===================
-A sample directive to enable/disable element on a view based on roles
+A sample directive to enable/disable element on a view based on roles.
+
+You can read more about it: https://aaatdd.wordpress.com/2014/10/02/an-authentication-directive/
 
 Usage
 ------
